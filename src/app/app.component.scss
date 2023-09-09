@@ -19,6 +19,8 @@
     width: 300px;
     display: flex;
     flex-direction: column;
+    max-height: 300px;
+    overflow-y: scroll;
   }
   
   .menu-item {

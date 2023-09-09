@@ -4,7 +4,7 @@
 <div class="menu" *ngIf="isOpen" [@dropDownMenu]>
 	<div class="menu-item"
   [ngClass]="{'selected-option':selectedOption===item.Value}"
-  *ngFor="let item of optionList; let i = index" (click)="selectOption(item.Value)">
+  *ngFor="let item of optionList; let i = index" (click)="onSelection(item.Value)">
 		{{item.DisplayValue}}
 	</div>
 </div>

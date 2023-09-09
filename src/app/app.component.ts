@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
-import { IDropdownItem } from './dropdown/dropdown.component';
 import { DropDownAnimation } from './animation';
 
 @Component({
@@ -30,9 +29,12 @@ export class AppComponent {
     this.optionList.push({ DisplayValue: 'Option 4', Value: 4 });
     this.optionList.push({ DisplayValue: 'Option 5', Value: 5 });
     this.optionList.push({ DisplayValue: 'Option 6', Value: 6 });
+    this.optionList.push({ DisplayValue: 'Option 7', Value: 7 });
+    this.optionList.push({ DisplayValue: 'Option 8', Value: 8 });
+    this.optionList.push({ DisplayValue: 'Option 9', Value: 9 });
 
   }
-  selectOption(i:number){
+  onSelection(i:number){
     this.selectedOption=i;
     this.isOpen=false;
     
