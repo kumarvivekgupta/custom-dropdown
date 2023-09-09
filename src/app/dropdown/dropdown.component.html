@@ -1,0 +1,22 @@
+<div class="dropdown dropdown_menu dropdown_menu--animated dropdown_menu-6" (mouseenter)="state = 0" (mouseleave)="state = 1">
+    <label for="dropdown-btn" *ngIf="label">{{ label }}</label>
+    <button
+      [disabled]="isDisabled"
+      id="dropdown-btn"
+      type="button"
+      class="dropdownbtn"
+      (click)="showMenu = !showMenu"
+      [style.width]="width"
+    >
+      <div id="displayText">
+        {{ selectedItem?.DisplayValue || 'Select an option' }}
+      </div>
+    
+      <i *ngIf="!showMenu" class="arrow down"></i>
+      <i *ngIf="showMenu" class="arrow up"></i>
+    </button>
+    <div id="dropdown" class="dropdown-content" [class.show]="showMenu">
+      <a *ngFor="let d of data" (click)="valueChange(d)">{{ d.DisplayValue }}</a>
+    </div>
+  </div>
+  
